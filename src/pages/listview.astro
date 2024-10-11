@@ -1,0 +1,18 @@
+---
+const artists = await fetch("...").then(response => response.json());
+import Card from "../components/Card.astro"; 
+import MainLayout from "../layout/MainLayout.astro"
+---
+
+<MainLayout>
+<ul>
+  {
+  	artists.map((artist) => (
+      <Card title={artist.title}
+    		img={artist.image.url}
+			featured={artist.featured}
+	  />
+  	))
+  }
+</ul>
+</MainLayout>

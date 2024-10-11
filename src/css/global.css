@@ -1,0 +1,112 @@
+* {
+  margin: 1.5rem;
+}
+
+html {
+  /* Colors */
+  --lilla-100: #1a1621;
+  --lilla-80: rgba(26, 22, 33, 0.8);
+  --lilla-misc: rgba(66, 48, 95, 0.8);
+
+  --pink-100: rgba(253, 52, 115);
+  --pink-40: rgba(253, 52, 115, 0.4);
+
+  --blå-100: rgba(32, 60, 243);
+
+  --hvid-100: #eee;
+
+  /* Typography */
+  --font-size-h1-hero: 11.5rem;
+  --font-size-h1-subhero: 9rem;
+  --font-size-h1: 7.25rem;
+  --font-size-h2: 4.5rem;
+  --font-size-h3: 3.5rem;
+  --font-size-h4: 2.75rem;
+  --font-size-p: 1.25rem;
+  --font-size-p-button: 1.5rem;
+  --font-size-p-tiny: 1rem;
+
+  /* Border Radius */
+  --border-radius-small: 5px;
+  --border-radius-large: 10px;
+
+  /* Paddings */
+  --padding-small: 1.5rem;
+  --padding-medium: 3rem;
+  --padding-large: 6.25rem;
+  --padding-xlarge: 12.5rem;
+}
+
+body {
+  background: var(--lilla-100);
+  color: var(--hvid-100);
+}
+
+h1.hero,
+h1.subhero,
+h1,
+h2,
+h3,
+h4,
+p,
+p.button,
+p.tiny {
+  color: var(--hvid-100);
+}
+
+h1.hero,
+h1.subhero,
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Staatliches", sans-serif;
+}
+
+p,
+p.button,
+p.tiny {
+  font-family: "Montserrat", sans-serif;
+}
+
+h1.hero {
+  font-size: var(--font-size-h1-hero);
+}
+
+h1.subhero {
+  font-size: var(--font-size-h1-subhero);
+}
+
+h1 {
+  font-size: var(--font-size-h1);
+}
+
+h2 {
+  font-size: var(--font-size-h2);
+}
+
+h3 {
+  font-size: var(--font-size-h3);
+}
+
+h4 {
+  font-size: var(--font-size-h4);
+}
+
+p {
+  font-size: var(--font-size-p);
+}
+
+p.tiny {
+  font-size: var(--font-size-p-tiny);
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
