@@ -1,14 +1,19 @@
 <header>
   <div class="logo">
     <a href="/">
-      <img src="logo.png" alt="Logo" />
+      <img src="/public/img/karrusel-logo_hvid.webp" alt="Logo" />
     </a>
+  </div>
+  <div>
+    <p>28-30 AUG</p>
   </div>
   <nav>
     <ul class="menu">
-      <li><a href="/">Forside</a></li>
-      <li><a href="../pages/Listview">Listview</a></li>
-      <li><a href="../pages/Singleview">Singleview</a></li>
+      <li><a href="/">Program</a></li>
+      <li><a href="/" ">Practical info</a></li>
+      <li><a href="/">About</a></li>
+      <li><a href="/">Follow us</a></li>
+      <li><a href="/">Volunteer</a></li>
     </ul>
   </nav>
 </header>
@@ -17,14 +22,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
     background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
 
   .logo img {
-    width: 50px;
-    height: 50px;
+    width: 150px;
+    height: 90.75px;
   }
 
   nav {
@@ -39,10 +42,6 @@
     padding: 0;
   }
 
-  .menu li {
-    margin-right: 20px;
-  }
-
   .menu li:last-child {
     margin-right: 0;
   }
@@ -54,6 +53,7 @@
     text-decoration: none;
     transition: color 0.3s;
     text-align: end;
+    font-family: "Staatliches", sans-serif;
   }
 
   .menu a:hover {
