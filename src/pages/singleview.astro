@@ -3,6 +3,7 @@ import MainLayout from "../layout/MainLayout.astro"
 ---
 
 <MainLayout>
+    
     <h1>Anetha</h1>
     <div class="sv">
 	<img src="/public/img/anetha.webp" alt="anetha">
@@ -17,7 +18,14 @@ import MainLayout from "../layout/MainLayout.astro"
 </MainLayout>
 
 <style>
+header, footer, body{
+    background-image: url(tesktur_singleview.svg);
+    object-fit: contain;
+}
 
+background-image {
+    size: 300px;
+}
 .p {
 border: solid;
 border-radius: var(--border-radius-large);
