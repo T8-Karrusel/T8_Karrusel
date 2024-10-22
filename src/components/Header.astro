@@ -4,9 +4,9 @@
       <img src="/public/img/karrusel-logo_hvid.webp" alt="Logo" />
     </a>
   </div>
-  <!-- <div>
+  <div class="dato_logo">
     <p>28-30 AUG</p>
-  </div> -->
+  </div>
   <nav>
     <ul class="menu">
       <li><a href="/">Program</a></li>
@@ -41,7 +41,6 @@
     margin: 0;
     padding: 0;
   }
-
   .menu li:last-child {
     margin-right: 0;
   }
@@ -53,6 +52,12 @@
     transition: color 0.3s;
     text-align: end;
     font-size: var(--font-size-p);
+  }
+  .dato_logo {
+    margin-left: -7rem;
+  }
+  .dato_logo p {
+    font-size: var(--font-size-p-tiny);
   }
 
   .menu a:hover {
