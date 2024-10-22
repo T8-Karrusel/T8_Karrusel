@@ -1,6 +1,7 @@
 ---
 import "../css/global.css"
 const {title} = Astro.props;
+import Header from "../components/Header.astro";
 ---
 
 <html lang="en">
@@ -17,7 +18,7 @@ const {title} = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
-        <header>Component</header>
+    <Header></Header>
     <main>
         <slot/>
     </main>
