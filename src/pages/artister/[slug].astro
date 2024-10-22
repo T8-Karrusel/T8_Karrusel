@@ -1,10 +1,21 @@
 ---
-import MainLayout from "../layout/MainLayout.astro"
+import MainLayout from "../../layout/MainLayout.astro"
+export async function getStaticPaths() {
+  const artists = await fetch("https://duwvvdxxtpowzjidyhdp.supabase.co/rest/v1/t8_data", {
+      headers: {
+        apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImR1d3Z2ZHh4dHBvd3pqaWR5aGRwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Mjk1MDIwMjIsImV4cCI6MjA0NTA3ODAyMn0.Qudv8UOTlmGvhWqfdmcJvan1dtmVfn7_7kv41HtP5N8" ,
+      },
+    }).then(res=>res.json())
+ return artists.map(artist => ({
+      params: { artist: artist.slug }, 
+      props: { artist } 
+    }))
+}
+const { artist } = Astro.props;
+console.log (artist)
 ---
-
 <MainLayout>
-    
-    <h1>Anetha</h1>
+    <h1>AL</h1>
     <div class="sv">
 	<img src="/public/img/anetha.webp" alt="anetha">
 <div class="p">
@@ -44,5 +55,4 @@ border-color: var(--pink-100);
         gap: 40px;
     }
 } 
-
 </style>

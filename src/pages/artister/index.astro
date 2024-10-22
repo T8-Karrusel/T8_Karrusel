@@ -1,0 +1,24 @@
+---
+import Card from "../../components/Card.astro"; 
+import MainLayout from "../../layout/MainLayout.astro"
+const { data } = Astro.props;
+console.log (data);
+const artister = await fetch ("https://duwvvdxxtpowzjidyhdp.supabase.co/rest/v1/t8_data", {
+	method: "GET",
+	headers: {
+		apikey:
+		"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImR1d3Z2ZHh4dHBvd3pqaWR5aGRwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Mjk1MDIwMjIsImV4cCI6MjA0NTA3ODAyMn0.Qudv8UOTlmGvhWqfdmcJvan1dtmVfn7_7kv41HtP5N8" 
+	},
+} 
+).then((res) => res.json()); 
+---
+
+<MainLayout>
+<ul>
+  {
+  	artister.map((artist) => (
+      <Card data={artist} />
+  	))
+  }
+</ul>
+</MainLayout>
