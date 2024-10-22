@@ -65,7 +65,8 @@ h4 {
 
 p,
 p.button,
-p.tiny {
+p.tiny,
+a {
   font-family: "Montserrat", sans-serif;
 }
 

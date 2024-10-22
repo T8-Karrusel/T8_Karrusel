@@ -3,34 +3,150 @@ import MainLayout from "../layout/MainLayout.astro"
 ---
 
 <MainLayout title="Forside">
-	<img src="/public/img/karrusel_forside.webp" alt="">
+	<img src="/public/img/karrusel_forside.webp" alt="Karrusel ">
     <h1 class="hero">KARRUSEL</h1>
     <h1 class="subhero">2025</h1>
     <a href="#">Buy Now</a>
     <h1>LINEUP 28-30 AUGUST</h1>
     <div class="line-up">
-        <div>
+        <div class="big">
         <a href="#">ANETHA</a> 
+         <span>&#x2022;</span>
         <a href="#">BEN BOHMER</a>
-        <a href="#">JOB JOBSE</a>
+         <span>&#x2022;</span>
+        <a href="#">JOB JOBSE</a> 
+          <span>&#x2022;</span>
         <a href="#">KI/KI</a>
+         <span>&#x2022;</span>
         <a href="#">MARLON HOFFSTADT</a>
+          <span>&#x2022;</span>
         <a href="#">NENE H</a>
+         <span>&#x2022;</span>
         <a href="#">SAMA' ABDULHAD</a>
+        <span>&#x2022;</span>
         <a href="#">VIKEN ARMAN</a>
+        <span>&#x2022;</span>
         <a href="#">X CLUB</a>
+        </div>
+        <div class="medium">
         <a href="#">DOOB & JANOMA</a>
+          <span>&#x2022;</span>
         <a href="#">JUICY ROMANCE</a>
+         <span>&#x2022;</span>
         <a href="#">NANDU</a>
+         <span>&#x2022;</span>
         <a href="#">OBERST & BUCHNER</a>
+        <span>&#x2022;</span>
         <a href="#">PEACHLYFE</a>
+          <span>&#x2022;</span>
         <a href="#">PRETTY GIRL</a>
+          <span>&#x2022;</span>
         <a href="#">TOMMIBOY</a>
+        </div>
+        <div class="small">
+        <a href="#">AELVA K</a>
+       <span>&#x2022;</span>
+        <a href="#">AJA GULRIS</a>
+          <span>&#x2022;</span>
+        <a href="#">ANTHON STACKS</a>
+         <span>&#x2022;</span>
+        <a href="#">B FROM E</a>
+         <span>&#x2022;</span>
+        <a href="#">BONGO & PUSK</a>
+         <span>&#x2022;</span>
+        <a href="#">BOOGIE ROOKIE</a>
+          <span>&#x2022;</span>
+        <a href="#">DAVE DINGER & AVOCADO</a>
+         <span>&#x2022;</span>
+        <a href="#">DINGO TRACKS</a>
+         <span>&#x2022;</span>
+        <a href="#">DJ LUKEY</a>
+         <span>&#x2022;</span>
+        <a href="#">DJ NAP</a>
+          <span>&#x2022;</span>
+        <a href="#">DUST MASTA HISS</a>
+          <span>&#x2022;</span>
+        <a href="#">EMMA SØ</a>
+          <span>&#x2022;</span>
+        <a href="#">FIA</a>
+          <span>&#x2022;</span>
+        <a href="#">GAVNLIG</a>
+         <span>&#x2022;</span>
+        <a href="#">HANDLESS DJ</a>
+         <span>&#x2022;</span>
+        <a href="#">HARRISON HEAT</a>
+         <span>&#x2022;</span>
+        <a href="#">!HARTY!</a>
+          <span>&#x2022;</span>
+        <a href="#">JESPER LEMKE</a>
+         <span>&#x2022;</span>
+        <a href="#">JOLIE</a>
+         <span>&#x2022;</span>
+        <a href="#">KIPANGA</a>
+          <span>&#x2022;</span>
+        <a href="#">LENI</a>
+          <span>&#x2022;</span>
+        <a href="#">LEOH</a>
+          <span>&#x2022;</span>
+        <a href="#">MINIMALENE</a>
+          <span>&#x2022;</span>
+        <a href="#">MOQST</a>
+        <span>&#x2022;</span>
+        <a href="#">N.E.GIRL</a>
+         <span>&#x2022;</span>
+        <a href="#">NAPPO</a>
+          <span>&#x2022;</span>
+        <a href="#">NIXXON</a>
+         <span>&#x2022;</span>
+        <a href="#">ONNI</a>
+          <span>&#x2022;</span>
+        <a href="#">PAI-LIN</a>
+         <span>&#x2022;</span>
+        <a href="#">PAYDAR</a>
+          <span>&#x2022;</span>
+        <a href="#">PLANET CARAVAN</a>
+          <span>&#x2022;</span>
+        <a href="#">RMZ</a>
+         <span>&#x2022;</span>
+        <a href="#">TADOH</a>
+       <span>&#x2022;</span>
+        <a href="#">TEISON</a>
+       <span>&#x2022;</span>
+        <a href="#">TJIQUITA</a>
+        <span>&#x2022;</span>
+        <a href="#">WILLE</a>
+        <span>&#x2022;</span>
+        <a href="#">ØRE SNU</a>
         </div>
     </div>
 </MainLayout>
 
-<style>
+  <style>
+    a{
+        color: var(--hvid-100);
+        text-decoration: none;
+        padding: none;
+    }
     .line-up {
+        border: solid;
+        border-radius: var(--border-radius-large);
+        border-color: var(--pink-100);
+    }
+    .big {
+        font-size: 48px;
+         line-height: 5rem;
+    }
+    .medium {
+        font-size: var(--font-size-p-button);
+         line-height: 3.5rem;
+    }
+    .small {
+        font-size: var(--font-size-p);
+        line-height: 2rem;
+    }
+    span {
+        color: var(--pink-100); 
+        font-size: 3.5rem;
     }
 </style>
+
