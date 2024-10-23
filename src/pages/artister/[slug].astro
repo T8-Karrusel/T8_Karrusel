@@ -1,4 +1,5 @@
 ---
+// @ts-nocheck
 import MainLayout from "../../layout/MainLayout.astro";
 export async function getStaticPaths() {
   const artists = await fetch("https://duwvvdxxtpowzjidyhdp.supabase.co/rest/v1/t8_data", {
@@ -16,9 +17,10 @@ console.log(artist);
 ---
 
 <MainLayout>
-  <h1>{artist.slug}</h1>
+  <h1>{artist.name}</h1>
+  <h2>{artist.dag}<span>&#x2022;</span>{artist.tid}<span>&#x2022;</span>{artist.scene}</h2>
   <div class="sv">
-    <img src="/img/anetha.webp" alt="anetha" />
+    <img src={artist.img} alt={artist.name} />
     <div class="p">
       <p>
         Born in 1989 in Bordeaux, Anetha began mixing at the age of 16, introduced to techno music by her father, a Kraftwerk fan and amateur DJ. Without formal musical training, she graduated with a degree in architecture.
@@ -52,6 +54,10 @@ console.log(artist);
     border-radius: var(--border-radius-large);
     border-color: var(--pink-100);
   }
+
+    span {
+    color: var(--pink-100);
+    font-size: 5rem;}
 
   @media (min-width: 750px) {
     .sv {
