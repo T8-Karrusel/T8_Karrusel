@@ -1,0 +1,24 @@
+---
+const {size = "medium" } = Astro.props;
+---
+
+<button data-size={size}>
+    <slot />
+  </button>
+
+<style>
+    button{
+        color: var(--hvid-100);
+        border: var(--pink-100) solid 2px ;
+        font-size: var(--font-size-p-button) ;
+    }
+    button:hover{
+        background: var(--pink-100);
+    }
+
+    /* Sizes */
+
+    [data-size="medium"]{
+        padding-block: var(--padding-small);
+    }
+</style>
