@@ -8,7 +8,7 @@ import MainLayout from "../layout/MainLayout.astro";
   <h3>2025</h3>
   <h1 class="subhero">2025</h1>
   <div class="order">
-  <a class="buy" href="#">Buy Now</a>
+  <a class="buy">Buy Now</a>
   <h1>LINEUP 28-30 AUGUST</h1>
   <div class="full_lineup">
     <div class="big">
@@ -127,7 +127,7 @@ import MainLayout from "../layout/MainLayout.astro";
       <p class="big">JOB JOBSE</p>
       <p class="big">KI/KI</p>
       <p class="big">MARLON HOFFSTADT</p>
-      <a>Lineup</a>
+      <button>Lineup</button>
   </div>
 </div>
 </MainLayout>
@@ -179,9 +179,7 @@ import MainLayout from "../layout/MainLayout.astro";
   .order {
     display: grid;
   }
-   .buy {
-      order: -1;
-    }
+
 
   /* Mobile */
   @media (max-width: 800px) {
@@ -209,4 +207,8 @@ import MainLayout from "../layout/MainLayout.astro";
   a{
     white-space: nowrap;
   }
+
+    .buy {
+      order: -1;
+    }
   }
