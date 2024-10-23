@@ -3,6 +3,11 @@
 ---
 
 <footer>
+  <div class="banner">
+    <div class="rul">
+      <p>THREE DAYS OF HOUSE DISCO & TECHNO IN THE WOODS<span>&#x2022;</span>THREE DAYS OF HOUSE DISCO & TECHNO IN THE WOODS<span>&#x2022;</span>THREE DAYS OF HOUSE DISCO & TECHNO IN THE WOODS<span>&#x2022;</span></p>
+    </div>
+  </div>
   <div class="lilla_streg">
     <p>Streg</p>
   </div>
@@ -27,10 +32,10 @@
 <style>
   .footer_flex {
     display: flex;
-    gap: 1rem;
+    gap: 8rem;
   }
   footer {
-    margin: 6rem;
+    margin: -3rem;
   }
   .footer_logo {
     width: 150px;
@@ -42,9 +47,65 @@
   }
   .lilla_streg {
     background-color: var(--lilla-misc);
-    margin: -10rem;
+    margin: 1rem;
   }
   .lilla_streg p {
     color: transparent;
+    max-height: 4px;
+  }
+  .banner p {
+    color: var(--pink-100);
+    font-size: var(--font-size-h3);
+    font-family: "Staatliches", sans-serif;
+    white-space: nowrap;
+  }
+  span {
+    color: var(--pink-100);
+    font-size: 4rem;
+  }
+  .rul {
+    animation-name: rul_kf;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+  @keyframes rul_kf {
+    from {
+      translate: -300% 0;
+    }
+    to {
+      translate: 120% 0;
+    }
+  }
+  @media screen and (max-width: 800px) {
+    footer {
+      margin: -3rem;
+    }
+    .lilla_streg {
+      background-color: var(--lilla-misc);
+      margin: 1rem;
+    }
+    .lilla_streg p {
+      color: transparent;
+      max-height: 4px;
+    }
+    .banner p {
+      display: none;
+    }
+    .footer_logo {
+      width: 150px;
+      height: 90.75px;
+      margin-left: -11rem;
+      display: none;
+    }
+    footer h4 {
+      font-size: var(--font-size-p);
+    }
+    footer p {
+      font-size: var(--font-size-p-tiny);
+    }
+    .footer_flex {
+      gap: 0rem;
+    }
   }
 </style>
