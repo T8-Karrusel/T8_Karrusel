@@ -11,9 +11,16 @@ const artister = await fetch ("https://duwvvdxxtpowzjidyhdp.supabase.co/rest/v1/
 	},
 } 
 ).then((res) => res.json()); 
+const { artist } = Astro.props;
+// const thursdayArtist= artist.filter((a) => a.dag === "THURSDAY");
+// const fridayArtist = artist.filter((a) => a.dag === "FRIDAY");
+// const saturdayArtist = artist.filter((a) => a.dag === "SATURDAY");
 ---
 
 <MainLayout>
+	<!-- <a href="">THURSDAY</a>
+	<a href="">FRIDAY</a>
+	<a href="">SATURDAY</a> -->
 <ul>
   {
   	artister.map((artist) => (

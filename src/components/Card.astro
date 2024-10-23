@@ -2,19 +2,19 @@
 const { data } = Astro.props;
 ---
 
-<a href={`/artister/${data.slug}`}></a>
-
 <li>
 <article class="grid">
+    <a class="article_knap" href={`/artister/${data.slug}`}>
     <div>
-    <img src="/img/anetha.webp" />
+    <img src=`../../img/${data.image}` alt={data.name} />
     </div>
     <div class="tekst_card">
     <h4>{data.dag} {data.tid}</h4>
     <h4>{data.name}</h4>
      <hr>
-    <button></button>
+    <a class="knap" href={`/artister/${data.slug}`}>Read More</a>
     </div>
+    </a>
 </article>
 </li>
 
@@ -26,10 +26,9 @@ article {
     border-color: var(--pink-100);
     }
  @media (max-width: 750px) {
-    img, hr, button {
+    img, hr, .knap {
         display: none;
     }
-
  }
 
   @media (min-width: 750px) {
