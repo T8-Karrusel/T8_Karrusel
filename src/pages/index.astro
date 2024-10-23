@@ -7,7 +7,8 @@ import MainLayout from "../layout/MainLayout.astro";
   <h1 class="hero">KARRUSEL</h1>
   <h3>2025</h3>
   <h1 class="subhero">2025</h1>
-  <a href="#">Buy Now</a>
+  <div class="order">
+  <a class="buy" href="#">Buy Now</a>
   <h1>LINEUP 28-30 AUGUST</h1>
   <div class="full_lineup">
     <div class="big">
@@ -126,18 +127,21 @@ import MainLayout from "../layout/MainLayout.astro";
       <p class="big">JOB JOBSE</p>
       <p class="big">KI/KI</p>
       <p class="big">MARLON HOFFSTADT</p>
+      <a>Lineup</a>
   </div>
+</div>
 </MainLayout>
 
 <style>
   body {
   background-image: url(/img/karrusel_forside.webp); 
   background-repeat: no-repeat;
-  background-size: contain;
+   background-size: contain;
   }
   h1.hero, h1.subhero {
   text-align: end;
   }
+
   .full_lineup, .cut_lineup {
   border: solid;
   border-radius: var(--border-radius-large);
@@ -172,6 +176,13 @@ import MainLayout from "../layout/MainLayout.astro";
   padding-top: 2rem;
   }
 
+  .order {
+    display: grid;
+  }
+   .buy {
+      order: -1;
+    }
+
   /* Mobile */
   @media (max-width: 800px) {
     h1 {
@@ -179,6 +190,10 @@ import MainLayout from "../layout/MainLayout.astro";
     }
     .full_lineup{
       display: none;
+    }
+
+     .buy {
+      order: 1;
     }
   }
 
