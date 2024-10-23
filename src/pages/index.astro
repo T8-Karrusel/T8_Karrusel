@@ -9,7 +9,7 @@ import MainLayout from "../layout/MainLayout.astro";
   <h1 class="subhero">2025</h1>
   <a href="#">Buy Now</a>
   <h1>LINEUP 28-30 AUGUST</h1>
-  <div class="line-up">
+  <div class="full_lineup">
     <div class="big">
       <a href="#">ANETHA</a>
       <span>&#x2022;</span>
@@ -120,104 +120,78 @@ import MainLayout from "../layout/MainLayout.astro";
       <a href="#">ØRE SNU</a>
     </div>
   </div>
+  <div class="cut_lineup big">
+      <p class="big">ANETHA</p>
+      <p class="big">BEN BOHMER</p>
+      <p class="big">JOB JOBSE</p>
+      <p class="big">KI/KI</p>
+      <p class="big">MARLON HOFFSTADT</p>
+  </div>
 </MainLayout>
 
 <style>
-  @media (max-width: 750px) {
+  body {
+  background-image: url(/img/karrusel_forside.webp); 
+  background-repeat: no-repeat;
+  background-size: contain;
+  }
+  h1.hero, h1.subhero {
+  text-align: end;
+  }
+  .full_lineup, .cut_lineup {
+  border: solid;
+  border-radius: var(--border-radius-large);
+  border-color: var(--pink-100);
+  background-image: url(tekstur_forside.svg);
+  background-color: rgba(26, 22, 33, 0.7);  /* Virker ikke */
+  background-blend-mode: overlay;
+  margin-bottom: 20rem;
+  }
+  a{
+  color: var(--hvid-100);
+  text-decoration: none;
+  padding: 0rem;
+  margin: 0rem;
+  white-space: nowrap;
+  }
+  .big {
+  font-size: 48px;
+  line-height: 5rem;
+  }
+  .medium {
+  font-size: var(--font-size-p-button);
+  line-height: 3.5rem;
+  }
+  .small {
+  font-size: var(--font-size-p);
+  line-height: 2.5rem;
+  }
+  span {
+  color: var(--pink-100); 
+  font-size: 3.5rem;
+  padding-top: 2rem;
+  }
+
+  /* Mobile */
+  @media (max-width: 800px) {
     h1 {
       display: none;
     }
-
-    body {
-      background-image:;
-      background-size: cover;
-    }
-  }
-  @media (min-width: 750px) {
-    h2,
-    h3 {
+    .full_lineup{
       display: none;
     }
   }
 
-  body {
-    background-image: url(/img/karrusel_forside.webp);
-    background-repeat: no-repeat;
-    background-size: contain;
+  /* Decktop */
+  @media (min-width: 800px) {
+  h2,
+  h3 {
+      display: none;
+    }
+  .cut_lineup {
+    display: none
   }
-  a {
-    color: var(--hvid-100);
-    text-decoration: none;
-    padding: 0rem;
-    margin: 0rem;
+  a{
     white-space: nowrap;
   }
-  .line-up {
-    border: solid;
-    border-radius: var(--border-radius-large);
-    border-color: var(--pink-100);
-    background-image: url(tekstur_forside.svg);
-    background-color: rgba(26, 22, 33, 0.7); /* Virker ikke */
-    background-blend-mode: overlay;
   }
-  .big {
-    font-size: 48px;
-    line-height: 5rem;
-  }
-  .medium {
-    font-size: var(--font-size-p-button);
-    line-height: 3.5rem;
-  }
-  .small {
-    font-size: var(--font-size-p);
-    line-height: 2.5rem;
-  }
-  span {
-    color: var(--pink-100);
-    font-size: 3.5rem;
-    padding-top: 2rem;
-  }
-  
-    @media (min-width: 750px) {
-    h2, h3 {
-    display: none;
-    }
-  }
-
-    body {
-       background-image: url(/img/karrusel_forside.webp); 
-       background-repeat: no-repeat;
-       background-size: contain;
-    }
-    a{
-        color: var(--hvid-100);
-        text-decoration: none;
-        padding: 0rem;
-        margin: 0rem;
-        white-space: nowrap;
-    }
-    .line-up {
-        border: solid;
-        border-radius: var(--border-radius-large);
-        border-color: var(--pink-100);
-        background-image: url(tekstur_forside.svg);
-       background-color: rgba(26, 22, 33, 0.7);  /* Virker ikke */
-        background-blend-mode: overlay;
-    }
-    .big {
-        font-size: 48px;
-        line-height: 5rem;
-    }
-    .medium {
-        font-size: var(--font-size-p-button);
-         line-height: 3.5rem;
-    }
-    .small {
-        font-size: var(--font-size-p);
-        line-height: 2.5rem;
-    }
-    span {
-        color: var(--pink-100); 
-        font-size: 3.5rem;
-        padding-top: 2rem;
-    }
