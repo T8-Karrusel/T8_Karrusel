@@ -19,4 +19,36 @@ const { data } = Astro.props;
 </li>
 
 <style>
+article {
+    margin-inline: -5rem;
+    border: solid;
+    border-radius: var(--border-radius-large);
+    border-color: var(--pink-100);
+    }
+ @media (max-width: 750px) {
+    img, hr, button {
+        display: none;
+    }
+
+ }
+
+  @media (min-width: 750px) {
+     img {
+    border: solid;
+    border-radius: var(--border-radius-large);
+    border-color: var(--pink-100);
+     }
+ 
+     .tekst_card {
+    border: solid;
+    border-radius: var(--border-radius-large);
+    border-color: var(--pink-100);
+     }
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+ }
 </style>
