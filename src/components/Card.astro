@@ -6,7 +6,7 @@ const { data } = Astro.props;
 <article class="grid">
     <a class="article_knap" href={`/artister/${data.slug}`}>
     <div>
-    <img src=`../../img/${data.image}` alt={data.name} />
+    <img class="test" src=`../../img/${data.image}` alt={data.name} />
     </div>
     <div class="tekst_card">
     <h4>{data.dag} {data.tid}</h4>
@@ -36,6 +36,12 @@ article {
     border: solid;
     border-radius: var(--border-radius-large);
     border-color: var(--pink-100);
+     }
+
+     .test {
+    width: 400px; 
+    height: 260px; 
+    object-fit: cover;
      }
  
      .tekst_card {
