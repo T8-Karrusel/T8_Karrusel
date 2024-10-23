@@ -17,17 +17,19 @@ console.log(artist);
 ---
 
 <MainLayout>
-  <h1>{artist.name}</h1>
-  <h2>{artist.dag}<span>&#x2022;</span>{artist.tid}<span>&#x2022;</span>{artist.scene}</h2>
+  <h1 class="desktop">{artist.name}</h1>
+  <h2 class="desktop">{artist.dag}<span>&#x2022;</span>{artist.tid}<span>&#x2022;</span>{artist.scene}</h2>
+  <h2 class="mobil">{artist.name}</h2>
+  <p class="mobil">{artist.dag}<span>&#x2022;</span>{artist.tid}<span>&#x2022;</span>{artist.scene}</p>
   <div class="sv">
     <img src={artist.img} alt={artist.name} />
     <div class="p">
       <p>
         Born in 1989 in Bordeaux, Anetha began mixing at the age of 16, introduced to techno music by her father, a Kraftwerk fan and amateur DJ. Without formal musical training, she graduated with a degree in architecture.
 
-        <br />Her professional DJ career started in 2013 during a few months’ stay in London, where she played in clubs such as Corsica Studios. She recorded her first sessions in her roommates’ studio, who were sound engineers. Upon returning to France, she set up her own studio in her apartment in Paris.
+        <br>Her professional DJ career started in 2013 during a few months’ stay in London, where she played in clubs such as Corsica Studios. She recorded her first sessions in her roommates’ studio, who were sound engineers. Upon returning to France, she set up her own studio in her apartment in Paris.
 
-        <br />As a resident at Blocaus collective events hosted in iconic venues around the capital, she performed from 2014 at renowned Paris spots like Concrete, La Machine du Moulin Rouge, and Rex Club. She started performing internationally in 2015 at venues such as Bassiani in Tbilisi, De School in Amsterdam, Village Underground in London, Fuse in Brussels, 2.35:1 Berns in Stockholm, About Blank in Berlin, and later in 2017 in Tokyo and at the legendary Berghain in Berlin. Her track "Acid Train," released in 2017, earned her a spot on a list of the twenty best techno tracks of the decade, according to Mix Magazine. In Amsterdam in 2018, her Boiler Room set was ranked as one of the best of the year in the techno genre.
+        <br>As a resident at Blocaus collective events hosted in iconic venues around the capital, she performed from 2014 at renowned Paris spots like Concrete, La Machine du Moulin Rouge, and Rex Club. She started performing internationally in 2015 at venues such as Bassiani in Tbilisi, De School in Amsterdam, Village Underground in London, Fuse in Brussels, 2.35:1 Berns in Stockholm, About Blank in Berlin, and later in 2017 in Tokyo and at the legendary Berghain in Berlin. Her track "Acid Train," released in 2017, earned her a spot on a list of the twenty best techno tracks of the decade, according to Mix Magazine. In Amsterdam in 2018, her Boiler Room set was ranked as one of the best of the year in the techno genre.
       </p>
     </div>
   </div>
@@ -40,7 +42,6 @@ console.log(artist);
     background-image: url(../../../tekstur_singleview.svg);
     object-fit: contain;
   }
-
   background-image {
     size: 300px;
   }
@@ -49,21 +50,38 @@ console.log(artist);
     border-radius: var(--border-radius-large);
     border-color: var(--pink-100);
   }
+
+  h2, h3 {
+      overflow-wrap: break-word;
+    }
   img {
     border-image: solid;
     border-radius: var(--border-radius-large);
     border-color: var(--pink-100);
   }
 
-    span {
+@media (max-width: 750px) {
+     .desktop {
+      display: none;
+    }
+     span {
     color: var(--pink-100);
-    font-size: 5rem;}
+    font-size: 2.5rem;}
 
+    }
   @media (min-width: 750px) {
     .sv {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 40px;
+    }
+
+     span {
+    color: var(--pink-100);
+    font-size: 5rem;}
+
+    .mobil {
+      display: none;
     }
   }
 </style>
