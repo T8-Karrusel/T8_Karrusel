@@ -1,6 +1,7 @@
 ---
 import Card from "../../components/Card.astro"; 
 import MainLayout from "../../layout/MainLayout.astro"
+import Button from "../../components/Button.astro";
 const { data } = Astro.props;
 console.log (data);
 const artister = await fetch ("https://duwvvdxxtpowzjidyhdp.supabase.co/rest/v1/t8_data", {
@@ -19,9 +20,11 @@ const saturdayArtist = artister.filter((a) => a.dag === "SATURDAY");
 ---
 
 <MainLayout>
-<a href="#thursday">THURSDAY</a>
-<a href="#friday">FRIDAY</a>
-<a href="#saturday">SATURDAY</a>
+	<section class="knapper">
+<Button variant="third"><a href="#thursday">THURSDAY</a></Button>
+<Button class="fredag" variant="third"><a href="#friday">FRIDAY</a></Button>
+<Button variant="third"><a href="#saturday">SATURDAY</a></Button>
+</section>
 <section id = thursday class="skjul">
 <h2>THURSDAY</h2>
 {thursdayArtist.map((artist) => (
@@ -45,9 +48,17 @@ const saturdayArtist = artister.filter((a) => a.dag === "SATURDAY");
 </MainLayout>
 
 <style>
+	.knapper {
+	margin: 4rem;
+	}
 h2 {
 	margin: 4rem;
 }
+ a {
+    text-decoration: none;
+    color: var(--hvid);
+  }
+
 </style>
 
 <script></script>
