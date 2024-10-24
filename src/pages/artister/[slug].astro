@@ -30,20 +30,19 @@ console.log(artist);
 </MainLayout>
 
 <style>
-  header,
-  footer,
   body {
     background-image: url(../../../tekstur_singleview.svg);
     object-fit: contain;
-    height: 220%;
+    margin: 1.5rem;
   }
   background-image {
-    
+    margin-top: -1000px;
   }
   .p {
     border: solid;
     border-radius: var(--border-radius-large);
     border-color: var(--pink-100);
+    padding: 10px;
   }
 
   h2, h3 {
@@ -53,7 +52,6 @@ console.log(artist);
     border-image: solid;
     border-radius: var(--border-radius-large);
     border-color: var(--pink-100);
-
   }
 
 @media (max-width: 750px) {
@@ -63,6 +61,8 @@ console.log(artist);
      span {
     color: var(--pink-100);
     font-size: 2.5rem;}
+
+    
 
     }
   @media (min-width: 750px) {
