@@ -13,9 +13,8 @@ const { variant } = Astro.props;
     border: var(--pink-100) solid 2px;
     font-size: var(--font-size-p-tiny);
     padding: 12px 10px 12px 10px;
-    max-width: 121px;
-    max-height: 55px;
     font-family: "Montserrat", sans-serif;
+    border-radius: var(--border-radius-small);
   }
   .primary:hover {
     color: var(--lilla-misc);
@@ -26,10 +25,8 @@ const { variant } = Astro.props;
     border: var(--pink-100) solid 2px;
     font-size: var(--font-size-p-button);
     padding: 15px 40px 15px 40px;
-    max-width: 328px;
-    max-height: 213px;
     font-family: "Montserrat", sans-serif;
-    border-radius: 10px;
+    border-radius: var(--border-radius-large);
   }
   .second:hover {
     background: var(--pink-100);
@@ -40,10 +37,8 @@ const { variant } = Astro.props;
     border: var(--pink-100) solid 2px;
     font-size: var(--font-size-p-button);
     padding: 15px 40px;
-    max-width: 182px;
-    max-height: 147px;
     font-family: "Montserrat", sans-serif;
-    border-radius: 10px;
+    border-radius: var(--border-radius-large);
   }
   .third:hover {
     background: var(--pink-100);

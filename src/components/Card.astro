@@ -1,5 +1,6 @@
 ---
 const { data } = Astro.props;
+import Button from "./Button.astro";
 ---
 
 <li>
@@ -12,7 +13,9 @@ const { data } = Astro.props;
         <h4>{data.dag} {data.tid}</h4>
         <h4>{data.name}</h4>
         <hr />
-        <a class="knap" href={`/artister/${data.slug}`}>Read More</a>
+        <a class="knap" href={`/artister/${data.slug}`}>
+         <Button variant="second">Read More</Button>
+        </a>
       </div>
     </a>
   </article>
@@ -26,6 +29,20 @@ const { data } = Astro.props;
     border-color: var(--pink-100);
     margin: 4rem;
   }
+
+  li {
+    list-style: none;
+  }
+  a {
+    text-decoration: none;
+    color: var(--hvid);
+  }
+
+   .knap {
+    display: grid;
+      place-items: end;
+      margin-top: 1.5rem;
+    }
   @media (max-width: 800px) {
     img,
     hr,
