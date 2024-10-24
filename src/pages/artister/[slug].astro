@@ -1,6 +1,7 @@
 ---
 // @ts-nocheck
 import MainLayout from "../../layout/MainLayout.astro";
+import Button from "../../components/Button.astro";
 export async function getStaticPaths() {
   const artists = await fetch("https://duwvvdxxtpowzjidyhdp.supabase.co/rest/v1/t8_data", {
     headers: {
@@ -21,15 +22,23 @@ console.log(artist);
   <h2 class="desktop">{artist.dag}<span>&#x2022;</span>{artist.tid}<span>&#x2022;</span>{artist.scene}</h2>
   <h2 class="mobil">{artist.name}</h2>
   <p class="mobil">{artist.dag}<span>&#x2022;</span>{artist.tid}<span>&#x2022;</span>{artist.scene}</p>
+  <a class="knap" href="/artister/">
+    <Button variant="second">Back to lineup</Button>
+   </a>
   <div class="sv">
     <img src=`../../img/${artist.image}` alt={artist.name} />
     <div class="p">
       <p>{artist.info}</p>
+      <Button variant="second">Listen</Button>
     </div>
   </div>
 </MainLayout>
 
 <style>
+
+  .knap {
+  margin-bottom: 100px;
+  }
   body {
     background-image: url(../../../tekstur_singleview.svg);
     object-fit: contain;
