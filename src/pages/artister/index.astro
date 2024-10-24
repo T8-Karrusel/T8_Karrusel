@@ -12,20 +12,47 @@ const artister = await fetch ("https://duwvvdxxtpowzjidyhdp.supabase.co/rest/v1/
 } 
 ).then((res) => res.json()); 
 const { artist } = Astro.props;
-// const thursdayArtist= artist.filter((a) => a.dag === "THURSDAY");
-// const fridayArtist = artist.filter((a) => a.dag === "FRIDAY");
-// const saturdayArtist = artist.filter((a) => a.dag === "SATURDAY");
+const thursdayArtist= artister.filter((a) => a.dag === "THURSDAY");
+const fridayArtist = artister.filter((a) => a.dag === "FRIDAY");
+const saturdayArtist = artister.filter((a) => a.dag === "SATURDAY");
+
+// const urlParams = new URLSearchParams(window.location.search);
+// const dag = urlParams.get("dag");
 ---
 
 <MainLayout>
-	<!-- <a href="">THURSDAY</a>
-	<a href="">FRIDAY</a>
-	<a href="">SATURDAY</a> -->
-<ul>
+<!-- <a href="https://duwvvdxxtpowzjidyhdp.supabase.co/rest/v1/t8_data">THURSDAY</a>
+<a href="https://duwvvdxxtpowzjidyhdp.supabase.co/rest/v1/t8_data">FRIDAY</a>
+<a href="https://duwvvdxxtpowzjidyhdp.supabase.co/rest/v1/t8_data">SATURDAY</a>  -->
+<a href="https://duwvvdxxtpowzjidyhdp.supabase.co/rest/v1/t8_data">THURSDAY</a>
+<a href="https://duwvvdxxtpowzjidyhdp.supabase.co/rest/v1/t8_data">FRIDAY</a>
+<a href="https://duwvvdxxtpowzjidyhdp.supabase.co/rest/v1/t8_data">SATURDAY</a>
+<section id = thursday class="skjul">
+<h1>THURSDAY</h1>
+{thursdayArtist.map((artist) => (
+      <Card data={artist} />
+  	))}
+</section>
+
+<h1>FRIDAY</h1>
+<section id = friday class="skjul">
+{fridayArtist.map((artist) => (
+      <Card data={artist} />
+  	))}
+</section>
+
+<h1>SATURDAY</h1>
+<section id = saturday class="skjul">
+{saturdayArtist.map((artist) => (
+      <Card data={artist} />
+  	))}
+</section>
+
+<!-- <ul>
   {
   	artister.map((artist) => (
       <Card data={artist} />
   	))
   }
-</ul>
+</ul> -->
 </MainLayout>

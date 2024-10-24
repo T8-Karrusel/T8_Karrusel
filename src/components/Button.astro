@@ -1,16 +1,18 @@
 ---
-const {size = "medium" } = Astro.props;
+const {variant} = Astro.props;
 ---
 
-<button data-size={size}>
+<button class={variant}>
     <slot />
   </button>
 
 <style>
-    button{
+    .primary {
         color: var(--hvid-100);
+        background-color: transparent;
         border: var(--pink-100) solid 2px ;
         font-size: var(--font-size-p-button) ;
+        padding: 12px, 10px, 12px, 10px;
     }
     button:hover{
         background: var(--pink-100);
