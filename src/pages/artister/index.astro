@@ -19,43 +19,35 @@ const saturdayArtist = artister.filter((a) => a.dag === "SATURDAY");
 ---
 
 <MainLayout>
-<a href="https://duwvvdxxtpowzjidyhdp.supabase.co/rest/v1/t8_data">THURSDAY</a>
-<a href="https://duwvvdxxtpowzjidyhdp.supabase.co/rest/v1/t8_data">FRIDAY</a>
-<a href="https://duwvvdxxtpowzjidyhdp.supabase.co/rest/v1/t8_data">SATURDAY</a>
-<h1>THURSDAY</h1>
+<a href="#thursday">THURSDAY</a>
+<a href="#friday">FRIDAY</a>
+<a href="#saturday">SATURDAY</a>
 <section id = thursday class="skjul">
+<h2>THURSDAY</h2>
 {thursdayArtist.map((artist) => (
       <Card data={artist} />
   	))}
 </section>
 
-<h1>FRIDAY</h1>
 <section id = friday class="skjul">
+<h2>FRIDAY</h2>
 {fridayArtist.map((artist) => (
       <Card data={artist} />
   	))}
 </section>
 
-<h1>SATURDAY</h1>
 <section id = saturday class="skjul">
+<h2>SATURDAY</h2>
 {saturdayArtist.map((artist) => (
       <Card data={artist} />
   	))}
 </section>
-
-
-	<!-- <a href="">THURSDAY</a>
-	<a href="">FRIDAY</a>
-	<a href="">SATURDAY</a> -->
-<!-- <ul>
-  {
-  	artister.map((artist) => (
-      <Card data={artist} />
-  	))
-  }
-</ul>  -->
 </MainLayout>
 
-<script>
-	
-</script>
+<style>
+h2 {
+	margin: 4rem;
+}
+</style>
+
+<script></script>
