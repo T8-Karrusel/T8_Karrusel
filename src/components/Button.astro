@@ -1,26 +1,53 @@
 ---
-const {variant} = Astro.props;
+const { variant } = Astro.props;
 ---
 
 <button class={variant}>
-    <slot />
-  </button>
+  <slot />
+</button>
 
 <style>
-    .primary {
-        color: var(--hvid-100);
-        background-color: transparent;
-        border: var(--pink-100) solid 2px ;
-        font-size: var(--font-size-p-button) ;
-        padding: 12px, 10px, 12px, 10px;
-    }
-    button:hover{
-        background: var(--pink-100);
-    }
+  .primary {
+    color: var(--hvid-100);
+    background-color: var(--pink-100);
+    border: var(--pink-100) solid 2px;
+    font-size: var(--font-size-p-tiny);
+    padding: 12px 10px 12px 10px;
+    max-width: 121px;
+    max-height: 55px;
+    font-family: "Montserrat", sans-serif;
+  }
+  .primary:hover {
+    color: var(--lilla-misc);
+  }
+  .second {
+    color: var(--hvid-100);
+    background-color: transparent;
+    border: var(--pink-100) solid 2px;
+    font-size: var(--font-size-p-button);
+    padding: 15px 40px 15px 40px;
+    max-width: 328px;
+    max-height: 213px;
+    font-family: "Montserrat", sans-serif;
+    border-radius: 10px;
+  }
+  .second:hover {
+    background: var(--pink-100);
+  }
+  .third {
+    color: var(--hvid-100);
+    background-color: transparent;
+    border: var(--pink-100) solid 2px;
+    font-size: var(--font-size-p-button);
+    padding: 15px 40px;
+    max-width: 182px;
+    max-height: 147px;
+    font-family: "Montserrat", sans-serif;
+    border-radius: 10px;
+  }
+  .third:hover {
+    background: var(--pink-100);
+  }
 
-    /* Sizes */
-
-    [data-size="medium"]{
-        padding-block: var(--padding-small);
-    }
+  /* Sizes */
 </style>
