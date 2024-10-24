@@ -136,7 +136,9 @@ import Button from "../components/Button.astro";
       <p class="big">JOB JOBSE</p>
       <p class="big">KI/KI</p>
       <p class="big">MARLON HOFFSTADT</p>
-      <button>Lineup</button>
+       <a class="knap" href="/artister/">
+         <Button variant="second">Lineup</Button>
+        </a>
     </div>
   </div>
 </MainLayout>
@@ -197,6 +199,11 @@ import Button from "../components/Button.astro";
     display: grid;
   }
 
+   .knap {
+    display: grid;
+      place-items: end;
+    }
+
   /* Mobile */
   @media (max-width: 800px) {
     h1 {
@@ -223,7 +230,6 @@ import Button from "../components/Button.astro";
     a {
       white-space: nowrap;
     }
-
     .buy {
       order: -1;
     }
